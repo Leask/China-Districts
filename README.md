@@ -3,6 +3,13 @@ China-Districts
 
 Make JSON Tree of China Districts
 
+## Node Model
+    {
+        id        : [string],
+        name      : [string],
+        districts : [array]
+    }
+
 
 ## Data Source
 中华人民共和国国家统计局

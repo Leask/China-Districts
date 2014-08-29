@@ -1,0 +1,9 @@
+{
+  "name": "China-Districts",
+  "version": "0.0.3",
+  "private": false,
+  "homepage": "https://github.com/Leask/China-Districts",
+  "description": "Make JSON Tree of China Districts",
+  "dependencies": {
+  }
+}

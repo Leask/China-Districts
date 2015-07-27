@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "private": false,
   "homepage": "https://github.com/Leask/China-Districts",
+  "main": "./districts.js",
   "description": "Make JSON Tree of China Districts",
   "dependencies": {
   }

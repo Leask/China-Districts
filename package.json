@@ -1,6 +1,6 @@
 {
   "name": "china-districts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "homepage": "https://github.com/Leask/China-Districts",
   "main": "./districts.js",

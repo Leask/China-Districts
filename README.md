@@ -23,6 +23,15 @@ http://www.stats.gov.cn/tjsj/tjbz/xzqhdm/201504/t20150415_712722.html
 
 ## How to use?
 ```
+npm install china-districts
+var chinaDistricts = require('china-districts');
+console.log(chinaDistricts);
+```
+
+
+## Contribution
+```
+# update the source data in districts.txt
 $ node make.js
 $ ls districts.js districts.json districts.min.json
 ```

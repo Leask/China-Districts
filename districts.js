@@ -26,13 +26,16 @@ fs.readFile('districts.txt', 'utf8', function (err, data) {
             continue;
         }
         var id     = lines[i].replace(/^([0-9]*).*$/, '$1');
-        var rawDis = lines[i].replace(/^[0-9]*(.*)$/, '$1');
-        var dis    = newDistrict(id, rawDis.trim());
-        if (rawDis.match(/^\ {4}[^\ ]*$/)) {
+        var rawDis = lines[i].replace(/^[0-9]*(.*)$/, '$1')
+                             .replace(/　/g, 't')
+                             .replace(/\ *\ {12}([^\ ]*)/g, 'ttt$1')
+                             .trim();
+        var dis    = newDistrict(id, rawDis.replace(/^t*/g, '').trim());
+        if (rawDis.match(/^t{1}[^t]*$/)) {
             var a = districts.districts.push(dis) - 1;
-        } else if (rawDis.match(/^\ {6}[^\ ]*$/)) {
+        } else if (rawDis.match(/^t{2}[^t]*$/)) {
             var b = districts.districts[a].districts.push(dis) - 1;
-        } else if (rawDis.match(/^\ {8}[^\ ]*$/)) {
+        } else if (rawDis.match(/^t{3}[^t]*$/)) {
             districts.districts[a].districts[b].districts.push(dis);
         }
     }
